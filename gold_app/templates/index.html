@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gold App</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+        <style>
+            .choice{
+                background-repeat: no-repeat;
+                background-size: 200px 200px;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Your Gold:</h1>
+            <div id ="wallet">
+                {{request.session.total_gold}}
+            </div>
+            <div id="games">
+                <form action="/result" method='POST'>
+                    {% csrf_token %}
+                    <div class="choice" style="background-image: url(/static/media/farm.png)">
+                        <input type = 'hidden' name = 'place' value = 'farm'> 
+                        <button>Farm</button>
+                        <p> (Earn 10-20 gold)</p>
+                    </div>
+                </form>
+            
+                <form action="/result" method='POST'>
+                {% csrf_token %} 
+                    <div class="choice" style="background-image: url(/static/media/cave.png)">
+                        <input type = 'hidden' name = 'place' value = 'cave'> 
+                        <button>Cave</button>
+                        <p> (Earn 5-10 gold)</p>
+                    </div>
+                </form>
+            
+                <form action="/result" method='POST'>
+                {% csrf_token %}        
+                    <div class="choice" style="background-image: url(/static/media/house.png)">
+                        <input type = 'hidden' name = 'place' value = 'house'> 
+                        <button>House</button>
+                        <p> (Earn 2-5 gold)</p>
+                    </div>
+                </form>
+
+                <form action="/result" method='POST'>
+                {% csrf_token %} 
+                    <div class="choice" style="background-image: url(/static/media/casino.png)">
+                        <input type = 'hidden' name = 'place' value = 'casino'> 
+                        <button>Casino</button>
+                        <p> (Earn/takes 0-50 gold)</p>
+
+                    </div>
+                </form>
+        </div>
+        <textarea id="gold_results">
+        {% for gold in request.session.activities %}
+            {{gold}}
+        {% endfor %}
+        </textarea>
+    </body>
+</html>

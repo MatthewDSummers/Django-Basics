@@ -1,0 +1,85 @@
+*{
+    padding: 0px;
+    margin: 0px auto;
+}
+body{
+    height: 710px;
+    width: 1310px;
+    opacity: 0.9;
+    margin:30px;
+    padding: 6px;
+    box-shadow: 0px 0px 9px rgb(109, 19, 97);
+}
+#container{
+    height: 670px;
+    width: 1270px;
+    padding: 20px;
+    box-shadow: 0px 0px 9px rgb(182, 160, 179);
+    background: linear-gradient(to right, #7f97d5,#e4e4e4, #7f97d5);
+}
+h1{ 
+    display: inline-block;
+    font-family: 'Gochi Hand', cursive;
+    color: rgb(11, 1, 130);
+}
+p{
+    position: relative; top: 14px; left: 33px;
+    font-family: 'Gochi Hand', cursive;
+    color: rgb(240, 235, 78);
+    font-size: 18px;
+}
+#wallet{
+    display: inline-block;
+    padding: 14px 40px 14px 40px;
+    color: rgb(245, 211, 211);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgb(165, 101, 101);
+}
+input[type=text] {
+    text-align: center;
+    color: rgb(128, 0, 0);
+    width: 200px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 4px 20px 2px;
+    background-color: rgb(237, 237, 237);
+    box-shadow: 3px 2px 7px rgb(85, 18, 162);
+}
+button{
+    color: rgb(128, 0, 0);
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius:  120% 90% / 490% 0%;
+    padding: 4px 20px 2px;
+    background-color: rgb(237, 237, 237);
+    box-shadow: 3px 2px 7px rgb(85, 18, 162);
+    margin: 162px 0px 0px 6px;
+}
+.choice{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 50px groove rgba(32, 48, 222, 0.502);
+    padding: 4px;
+}
+#games{
+    margin-top: 20px;
+    display: flex;
+}
+#gold_results{
+    opacity: .65;
+    overflow-y: scroll;
+    width: 485px;
+    height: 270px;
+    margin: 14px 0px 0px 380px;
+    border: 2px solid rgb(147, 24, 8);
+    padding: 14px;
+    background-color: rgb(135, 21, 21);
+    color: rgb(245, 211, 211);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+}
